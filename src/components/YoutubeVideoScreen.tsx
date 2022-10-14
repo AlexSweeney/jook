@@ -6,15 +6,13 @@ import React from "react";
     if isPlaying === true, plays video
 */
 
-interface VideoScreenProps {
-  url: string;
-  isPlaying: boolean;
-}
-
-const VideoScreen = ({
-  url = "https://www.youtube.com/embed/r1LlOBPhC_c",
+const YoutubeVideoScreen = ({
+  videoCode = "r1LlOBPhC_c",
   isPlaying = true,
-}: VideoScreenProps) => {
+}) => {
+  const autoPlayExtension = isPlaying ? "?autoplay=1" : "";
+  const url = `https://www.youtube.com/embed/${videoCode + autoPlayExtension}`;
+
   return (
     <div>
       <iframe
@@ -22,12 +20,10 @@ const VideoScreen = ({
         height="315"
         src={url}
         title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
       ></iframe>
     </div>
   );
 };
 
-export default VideoScreen;
+export default YoutubeVideoScreen;
