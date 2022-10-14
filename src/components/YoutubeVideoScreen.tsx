@@ -1,9 +1,9 @@
 import React from "react";
 
 /*
-    accepts youtube url 
+    accepts youtube video code 
     shows youtube video
-    if isPlaying === true, plays video
+    !! if isPlaying === true, plays video on load
 */
 
 const YoutubeVideoScreen = ({
