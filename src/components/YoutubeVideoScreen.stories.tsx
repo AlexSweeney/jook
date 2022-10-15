@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof YoutubeVideoScreen> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   videoCode: "r1LlOBPhC_c",
-  isPlaying: true,
+  autoPlay: true,
 };
