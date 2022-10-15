@@ -6,10 +6,15 @@ import React from "react";
     !! if isPlaying === true, plays video on load
 */
 
+interface YoutubeVideoScreenProps {
+  videoCode: string;
+  isPlaying: boolean;
+}
+
 const YoutubeVideoScreen = ({
-  videoCode = "r1LlOBPhC_c",
-  isPlaying = true,
-}) => {
+  videoCode,
+  isPlaying,
+}: YoutubeVideoScreenProps) => {
   const autoPlayExtension = isPlaying ? "?autoplay=1" : "";
   const url = `https://www.youtube.com/embed/${videoCode + autoPlayExtension}`;
 

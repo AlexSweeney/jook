@@ -7,8 +7,12 @@ export default {
   component: YoutubeVideoScreen,
 } as ComponentMeta<typeof YoutubeVideoScreen>;
 
-const Template: ComponentStory<typeof YoutubeVideoScreen> = () => (
-  <YoutubeVideoScreen />
+const Template: ComponentStory<typeof YoutubeVideoScreen> = (args) => (
+  <YoutubeVideoScreen {...args} />
 );
 
 export const Primary = Template.bind({});
+Primary.args = {
+  videoCode: "r1LlOBPhC_c",
+  isPlaying: true,
+};
