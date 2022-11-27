@@ -1,4 +1,3 @@
-import React from "react";
 import VideoControls from "./VideoControls";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
